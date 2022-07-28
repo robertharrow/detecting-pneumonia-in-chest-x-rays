@@ -1,5 +1,9 @@
 # Images
 chest_xray/
+chest_xray_contrast/
+
+#Models
+models/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
