@@ -53,7 +53,7 @@ Histogram Equalization is a type of image processing that increases the global c
 
 <img src="images/original-hist.png">
 <img src="images/clahe-hist.png">
-<img src="images/comparison.png">
+<img src="images/comparison.jpg">
 <img src="images/histogram.png">
 #### Class Distribution
 
