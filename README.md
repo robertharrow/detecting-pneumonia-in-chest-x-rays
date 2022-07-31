@@ -43,7 +43,7 @@ The images are already distributed into a 'train' and 'test' folder. Furthermore
 
 #### Directory Structure
 
-<img align="left" src="images/file-directory.png">
+<img src="images/file-directory.png">
 
 ### Contrast Limited Adaptive Histogram Equalization (CLAHE)
 
@@ -51,21 +51,21 @@ Histogram Equalization is a type of image processing that increases the global c
 
 [Research](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265949) published in 2022 showed that using Histogram Equalization led to improved performance of CNNs in image classification tasks for Pneumonia and COVID-19. We will try to implement those here.
 
-<img align="left" src="images/original-hist.png">
-<img align="left" src="images/clahe-hist.png">
-<img align="left" src="images/comparison.png">
-<img align="left" src="images/histogram.png">
+<img src="images/original-hist.png">
+<img src="images/clahe-hist.png">
+<img src="images/comparison.png">
+<img src="images/histogram.png">
 #### Class Distribution
 
-<img align="left" src="images/sample-distribution.png">
+<img src="images/sample-distribution.png">
 
 There is a mild class imbalance in our training data. We'll account for this when building our models using class_weights in the pre-processing step.
 
 #### Previewing Images
 Next, it would be good to see how the normal and pneumonia images look like in case there is anything interesting to learn from inspecting them.
 
-<img align="left" src="images/normal-xrays.png">
-<img align="left" src="images/pneumonia-xrays.png">
+<img src="images/normal-xrays.png">
+<img src="images/pneumonia-xrays.png">
 
 To an untrained eye, these images look similar. One interesting note: it looks like these images are pretty standardized. This isn't surprising since chest x-rays have a format for how they are conducted. That means we probably don't have to worry about creating variations of our images (flipped, rotated, etc.) since they are, for the most part, pretty standard.
 
@@ -106,11 +106,11 @@ We will use the weights these pre-trained models learned on their original datas
 
 
 ### Final Model (VGG19) Architecture
-<img align="left" src="images/vgg-model.png">
+<img src="images/vgg-model.png">
 
 ## Final Model Evaluation
 
-<img align="left" src="images/test-data-confusion-matrix.png">
+<img src="images/test-data-confusion-matrix.png">
 
 Accuracy: 0.865385
 Precision: 0.824153
@@ -122,16 +122,16 @@ One potential reason for this is the class imbalance. Our training data did not 
 
 
 ## Conclusions
-​
+
 * VGG19 was the best model for detecting pneumonia in chest x-rays
 * The model achieved an F1 score 0.90 meeting our minimum threshold
 * The precision of the model is quite poor (0.82) and it misclassified healthy chest x-rays as having pneumonia
 * It's recommended we obtain more normal samples to train our model on to improve this
-​
+
 
 ### For more information
 
-See the full analysis in the [Jupyter Notebook](https://github.com/robertharrow/chest-x-ray-images/blob/main/modeling.ipynb) or review this [presentation](https://github.com/robertharrow/modeling-recidivism/blob/main/presentation.pdf).
+See the full analysis in the [Jupyter Notebook](https://github.com/robertharrow/chest-x-ray-images/blob/main/modeling.ipynb) or review this [presentation](https://github.com/robertharrow/chest-x-ray-images/blob/main/presentation.pdf).
 
 For additional info, contact Robert Harrow at rharrow928@gmail.com.
 
